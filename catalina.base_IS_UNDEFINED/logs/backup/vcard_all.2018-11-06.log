@@ -1,0 +1,1 @@
+[main] ERROR 2018-11-06 15:41:46.973 o.a.v.r.l.Log4JLogChute[164] - ResourceManager : unable to find resource '/com/hong610/common/helper/templates/entity.java.vm' in any resource loader.

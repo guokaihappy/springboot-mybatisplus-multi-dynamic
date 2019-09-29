@@ -1,0 +1,12 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import ${superServiceClassPackage};
+
+/**
+ * ${table.comment} Dao接口
+ * Created by ${author} on ${cfg.time}
+ */
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+	
+}

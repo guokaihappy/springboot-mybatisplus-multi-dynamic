@@ -1,0 +1,875 @@
+[main] INFO  2018-11-07 17:18:26.859 c.m.MybatisPlusApplication[48] - Starting MybatisPlusApplication on DESKTOP-P17JSOB with PID 16504 (D:\workspace\springboot-mybatisplus\target\classes started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 17:18:26.866 c.m.MybatisPlusApplication[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 17:18:26.943 o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext[583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Wed Nov 07 17:18:26 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 17:18:27.273 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 17:18:27.750 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.750 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.751 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.751 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.751 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.752 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.752 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.752 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:18:27.752 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] INFO  2018-11-07 17:18:29.118 o.s.b.c.e.t.TomcatEmbeddedServletContainer[89] - Tomcat initialized with port(s): 8080 (http)
+[main] INFO  2018-11-07 17:18:29.149 o.a.c.c.StandardService[179] - Starting service [Tomcat]
+[main] INFO  2018-11-07 17:18:29.151 o.a.c.c.StandardEngine[179] - Starting Servlet Engine: Apache Tomcat/8.5.15
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.259 o.a.c.c.C.[.[.[/][179] - Initializing Spring embedded WebApplicationContext
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.260 o.s.w.c.ContextLoader[276] - Root WebApplicationContext: initialization completed in 2318 ms
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.519 o.s.b.w.s.ServletRegistrationBean[190] - Mapping servlet: 'dispatcherServlet' to [/]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.524 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'metricsFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.526 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.527 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.528 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.529 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'requestContextFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.530 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:18:29.530 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'applicationContextIdFilter' to: [/*]
+[main] INFO  2018-11-07 17:18:30.335 c.a.d.p.DruidDataSource[928] - {dataSource-1} inited
+[main] WARN  2018-11-07 17:18:30.859 o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext[551] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+[main] INFO  2018-11-07 17:18:30.867 c.a.d.p.DruidDataSource[1823] - {dataSource-1} closed
+[main] INFO  2018-11-07 17:18:30.870 o.a.c.c.StandardService[179] - Stopping service [Tomcat]
+[main] INFO  2018-11-07 17:18:30.921 o.s.b.a.l.AutoConfigurationReportLoggingInitializer[101] - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[main] ERROR 2018-11-07 17:18:30.925 o.s.b.SpringApplication[771] - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.mljr.MybatisPlusApplication.main(MybatisPlusApplication.java:17)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342)
+	... 30 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 42 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\springboot-mybatisplus\target\classes\mybatis\PersistentLoginsMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:585)
+	at com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:385)
+	at com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:608)
+	at com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:143)
+	at com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$3b6e4670.CGLIB$sqlSessionFactory$1(<generated>)
+	at com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$3b6e4670$$FastClassBySpringCGLIB$$4e27d2da.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358)
+	at com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$3b6e4670.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 43 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 11; columnNumber: 14; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:259)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:78)
+	at com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:581)
+	... 56 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1994)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:879)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1782)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2967)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:257)
+	... 59 common frames omitted
+[main] INFO  2018-11-07 17:24:26.896 c.m.MybatisPlusApplication[48] - Starting MybatisPlusApplication on DESKTOP-P17JSOB with PID 15256 (D:\workspace\springboot-mybatisplus\target\classes started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 17:24:26.899 c.m.MybatisPlusApplication[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 17:24:26.966 o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext[583] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Wed Nov 07 17:24:26 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 17:24:27.372 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 17:24:27.702 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.702 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.702 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.702 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.703 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.703 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.703 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.703 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:24:27.703 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] INFO  2018-11-07 17:24:28.925 o.s.b.c.e.t.TomcatEmbeddedServletContainer[89] - Tomcat initialized with port(s): 8080 (http)
+[main] INFO  2018-11-07 17:24:28.944 o.a.c.c.StandardService[179] - Starting service [Tomcat]
+[main] INFO  2018-11-07 17:24:28.946 o.a.c.c.StandardEngine[179] - Starting Servlet Engine: Apache Tomcat/8.5.15
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.052 o.a.c.c.C.[.[.[/][179] - Initializing Spring embedded WebApplicationContext
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.052 o.s.w.c.ContextLoader[276] - Root WebApplicationContext: initialization completed in 2086 ms
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.309 o.s.b.w.s.ServletRegistrationBean[190] - Mapping servlet: 'dispatcherServlet' to [/]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.315 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'metricsFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.316 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'characterEncodingFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.317 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.318 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.320 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'requestContextFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.321 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[localhost-startStop-1] INFO  2018-11-07 17:24:29.322 o.s.b.w.s.FilterRegistrationBean[258] - Mapping filter: 'applicationContextIdFilter' to: [/*]
+[main] INFO  2018-11-07 17:24:29.790 c.a.d.p.DruidDataSource[928] - {dataSource-1} inited
+[main] WARN  2018-11-07 17:24:30.330 c.b.m.t.TableInfoHelper[192] - Warn: Could not find @TableId in Class: com.mljr.security.entity.PersistentLogins.
+[main] WARN  2018-11-07 17:24:30.332 c.b.m.m.AutoSqlInjector[145] - class com.mljr.security.entity.PersistentLogins ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[main] INFO  2018-11-07 17:24:31.155 o.s.w.s.m.m.a.RequestMappingHandlerAdapter[534] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b8dfcc1: startup date [Wed Nov 07 17:24:26 CST 2018]; root of context hierarchy
+[main] INFO  2018-11-07 17:24:31.225 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[main] INFO  2018-11-07 17:24:31.227 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[main] INFO  2018-11-07 17:24:31.270 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:24:31.270 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:24:31.311 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:24:31.639 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.641 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[main] INFO  2018-11-07 17:24:31.642 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[main] INFO  2018-11-07 17:24:31.643 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.646 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:24:31.647 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.648 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.650 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[main] INFO  2018-11-07 17:24:31.651 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[main] INFO  2018-11-07 17:24:31.655 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.656 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.658 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.659 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.660 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.664 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[main] INFO  2018-11-07 17:24:31.665 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:24:31.666 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:24:31.898 o.s.j.e.a.AnnotationMBeanExporter[431] - Registering beans for JMX exposure on startup
+[main] INFO  2018-11-07 17:24:31.899 o.s.j.e.a.AnnotationMBeanExporter[916] - Bean with name 'dataSource' has been autodetected for JMX exposure
+[main] INFO  2018-11-07 17:24:31.909 o.s.j.e.a.AnnotationMBeanExporter[671] - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[main] INFO  2018-11-07 17:24:31.910 o.s.b.a.e.j.EndpointMBeanExporter[431] - Registering beans for JMX exposure on startup
+[main] INFO  2018-11-07 17:24:31.917 o.s.c.s.DefaultLifecycleProcessor[343] - Starting beans in phase 0
+[main] INFO  2018-11-07 17:24:31.921 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'auditEventsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=auditEventsEndpoint]
+[main] INFO  2018-11-07 17:24:31.936 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+[main] INFO  2018-11-07 17:24:31.946 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+[main] INFO  2018-11-07 17:24:31.958 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+[main] INFO  2018-11-07 17:24:31.966 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+[main] INFO  2018-11-07 17:24:31.969 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+[main] INFO  2018-11-07 17:24:31.973 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'loggersEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=loggersEndpoint]
+[main] INFO  2018-11-07 17:24:31.979 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+[main] INFO  2018-11-07 17:24:31.982 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+[main] INFO  2018-11-07 17:24:31.985 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+[main] INFO  2018-11-07 17:24:31.990 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+[main] INFO  2018-11-07 17:24:31.992 o.s.b.a.e.j.EndpointMBeanExporter[678] - Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+[main] INFO  2018-11-07 17:24:32.015 o.a.c.h.Http11NioProtocol[179] - Initializing ProtocolHandler ["http-nio-8080"]
+[main] INFO  2018-11-07 17:24:32.065 o.a.c.h.Http11NioProtocol[179] - Starting ProtocolHandler ["http-nio-8080"]
+[main] INFO  2018-11-07 17:24:32.075 o.a.t.u.n.NioSelectorPool[179] - Using a shared selector for servlet write/read
+[main] INFO  2018-11-07 17:24:32.094 o.s.b.c.e.t.TomcatEmbeddedServletContainer[201] - Tomcat started on port(s): 8080 (http)
+[main] INFO  2018-11-07 17:24:32.100 c.m.MybatisPlusApplication[57] - Started MybatisPlusApplication in 5.558 seconds (JVM running for 5.986)
+[main] INFO  2018-11-07 17:31:52.622 o.s.b.t.c.SpringBootTestContextBootstrapper[319] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mljr.test.MybatisPlustTest], using SpringBootContextLoader
+[main] INFO  2018-11-07 17:31:52.628 o.s.t.c.s.AbstractContextLoader[264] - Could not detect default resource locations for test class [com.mljr.test.MybatisPlustTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[main] INFO  2018-11-07 17:31:52.630 o.s.t.c.s.AnnotationConfigContextLoaderUtils[81] - Could not detect default configuration classes for test class [com.mljr.test.MybatisPlustTest]: MybatisPlustTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[main] INFO  2018-11-07 17:31:52.792 o.s.b.t.c.SpringBootTestContextBootstrapper[206] - Found @SpringBootConfiguration com.mljr.MybatisPlusApplication for test class com.mljr.test.MybatisPlustTest
+[main] INFO  2018-11-07 17:31:52.800 o.s.b.t.c.SpringBootTestContextBootstrapper[260] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[main] INFO  2018-11-07 17:31:52.825 o.s.b.t.c.SpringBootTestContextBootstrapper[187] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d3a22a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d082e88, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@60704c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b19b79, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a32de6c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7692d9cc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75f32542, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7f1302d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@43ee72e6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23529fee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4fe767f3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2805c96b]
+[main] INFO  2018-11-07 17:31:53.324 c.m.t.MybatisPlustTest[48] - Starting MybatisPlustTest on DESKTOP-P17JSOB with PID 5672 (started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 17:31:53.325 c.m.t.MybatisPlustTest[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 17:31:53.364 o.s.w.c.s.GenericWebApplicationContext[583] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:31:53 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 17:31:53.747 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 17:31:54.165 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.166 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.166 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.166 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.166 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.167 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.167 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.167 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:31:54.167 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] INFO  2018-11-07 17:31:55.562 c.a.d.p.DruidDataSource[928] - {dataSource-1} inited
+[main] WARN  2018-11-07 17:31:56.024 c.b.m.t.TableInfoHelper[192] - Warn: Could not find @TableId in Class: com.mljr.security.entity.PersistentLogins.
+[main] WARN  2018-11-07 17:31:56.025 c.b.m.m.AutoSqlInjector[145] - class com.mljr.security.entity.PersistentLogins ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[main] INFO  2018-11-07 17:31:57.162 o.s.w.s.m.m.a.RequestMappingHandlerAdapter[534] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:31:53 CST 2018]; root of context hierarchy
+[main] INFO  2018-11-07 17:31:57.239 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[main] INFO  2018-11-07 17:31:57.241 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[main] INFO  2018-11-07 17:31:57.278 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:31:57.279 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:31:57.318 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:31:57.643 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.644 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[main] INFO  2018-11-07 17:31:57.646 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.648 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.650 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:31:57.650 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.652 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:31:57.652 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.655 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.656 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.658 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[main] INFO  2018-11-07 17:31:57.660 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[main] INFO  2018-11-07 17:31:57.661 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[main] INFO  2018-11-07 17:31:57.663 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.664 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.666 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:31:57.667 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[main] INFO  2018-11-07 17:31:57.975 c.m.t.MybatisPlustTest[57] - Started MybatisPlustTest in 5.013 seconds (JVM running for 6.048)
+[Thread-2] INFO  2018-11-07 17:31:58.390 o.s.w.c.s.GenericWebApplicationContext[984] - Closing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:31:53 CST 2018]; root of context hierarchy
+[Thread-2] INFO  2018-11-07 17:31:58.404 c.a.d.p.DruidDataSource[1823] - {dataSource-1} closed
+[main] INFO  2018-11-07 17:33:54.894 o.s.b.t.c.SpringBootTestContextBootstrapper[319] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mljr.test.MybatisPlustTest], using SpringBootContextLoader
+[main] INFO  2018-11-07 17:33:54.900 o.s.t.c.s.AbstractContextLoader[264] - Could not detect default resource locations for test class [com.mljr.test.MybatisPlustTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[main] INFO  2018-11-07 17:33:54.901 o.s.t.c.s.AnnotationConfigContextLoaderUtils[81] - Could not detect default configuration classes for test class [com.mljr.test.MybatisPlustTest]: MybatisPlustTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[main] INFO  2018-11-07 17:33:55.010 o.s.b.t.c.SpringBootTestContextBootstrapper[206] - Found @SpringBootConfiguration com.mljr.MybatisPlusApplication for test class com.mljr.test.MybatisPlustTest
+[main] INFO  2018-11-07 17:33:55.018 o.s.b.t.c.SpringBootTestContextBootstrapper[260] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[main] INFO  2018-11-07 17:33:55.038 o.s.b.t.c.SpringBootTestContextBootstrapper[187] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d3a22a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d082e88, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@60704c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b19b79, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a32de6c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7692d9cc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75f32542, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7f1302d6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@43ee72e6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23529fee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4fe767f3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2805c96b]
+[main] INFO  2018-11-07 17:33:55.506 c.m.t.MybatisPlustTest[48] - Starting MybatisPlustTest on DESKTOP-P17JSOB with PID 11936 (started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 17:33:55.507 c.m.t.MybatisPlustTest[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 17:33:55.546 o.s.w.c.s.GenericWebApplicationContext[583] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:33:55 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 17:33:55.943 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 17:33:56.331 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.331 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.332 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.332 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.332 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.332 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.332 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.333 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 17:33:56.333 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] INFO  2018-11-07 17:33:57.767 c.a.d.p.DruidDataSource[928] - {dataSource-1} inited
+[main] WARN  2018-11-07 17:33:58.201 c.b.m.t.TableInfoHelper[192] - Warn: Could not find @TableId in Class: com.mljr.security.entity.PersistentLogins.
+[main] WARN  2018-11-07 17:33:58.203 c.b.m.m.AutoSqlInjector[145] - class com.mljr.security.entity.PersistentLogins ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[main] INFO  2018-11-07 17:33:59.364 o.s.w.s.m.m.a.RequestMappingHandlerAdapter[534] - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:33:55 CST 2018]; root of context hierarchy
+[main] INFO  2018-11-07 17:33:59.444 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[main] INFO  2018-11-07 17:33:59.445 o.s.w.s.m.m.a.RequestMappingHandlerMapping[543] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[main] INFO  2018-11-07 17:33:59.487 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:33:59.488 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:33:59.540 o.s.w.s.h.SimpleUrlHandlerMapping[362] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[main] INFO  2018-11-07 17:33:59.924 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[main] INFO  2018-11-07 17:33:59.927 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[main] INFO  2018-11-07 17:33:59.928 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[main] INFO  2018-11-07 17:33:59.934 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.936 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.939 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.941 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:33:59.943 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.944 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[main] INFO  2018-11-07 17:33:59.949 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.951 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.953 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.955 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[main] INFO  2018-11-07 17:33:59.956 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.957 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.959 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[main] INFO  2018-11-07 17:33:59.961 o.s.b.a.e.m.EndpointHandlerMapping[543] - Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[main] INFO  2018-11-07 17:34:00.249 c.m.t.MybatisPlustTest[57] - Started MybatisPlustTest in 5.112 seconds (JVM running for 5.864)
+[Thread-2] INFO  2018-11-07 17:34:00.475 o.s.w.c.s.GenericWebApplicationContext[984] - Closing org.springframework.web.context.support.GenericWebApplicationContext@7188af83: startup date [Wed Nov 07 17:33:55 CST 2018]; root of context hierarchy
+[Thread-2] INFO  2018-11-07 17:34:00.488 c.a.d.p.DruidDataSource[1823] - {dataSource-1} closed
+[main] INFO  2018-11-07 19:23:33.036 o.s.b.t.c.SpringBootTestContextBootstrapper[319] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mljr.test.MybatisPlustTest], using SpringBootContextLoader
+[main] INFO  2018-11-07 19:23:33.042 o.s.t.c.s.AbstractContextLoader[264] - Could not detect default resource locations for test class [com.mljr.test.MybatisPlustTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[main] INFO  2018-11-07 19:23:33.043 o.s.t.c.s.AnnotationConfigContextLoaderUtils[81] - Could not detect default configuration classes for test class [com.mljr.test.MybatisPlustTest]: MybatisPlustTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[main] INFO  2018-11-07 19:23:33.162 o.s.b.t.c.SpringBootTestContextBootstrapper[206] - Found @SpringBootConfiguration com.mljr.MybatisPlusApplication for test class com.mljr.test.MybatisPlustTest
+[main] INFO  2018-11-07 19:23:33.169 o.s.b.t.c.SpringBootTestContextBootstrapper[260] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[main] INFO  2018-11-07 19:23:33.188 o.s.b.t.c.SpringBootTestContextBootstrapper[187] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@184cf7cf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2fd6b6c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5bfa9431, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5db250b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223f3642, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38c5cc4c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@37918c79, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78e94dcf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@233fe9b6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@358ee631, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ec756bd]
+[main] INFO  2018-11-07 19:23:33.695 c.m.t.MybatisPlustTest[48] - Starting MybatisPlustTest on DESKTOP-P17JSOB with PID 22532 (started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 19:23:33.696 c.m.t.MybatisPlustTest[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 19:23:33.734 o.s.w.c.s.GenericWebApplicationContext[583] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@169bb4dd: startup date [Wed Nov 07 19:23:33 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 19:23:34.085 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 19:23:34.620 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.620 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.621 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.621 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.622 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.622 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.622 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.623 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:23:34.623 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] WARN  2018-11-07 19:23:35.613 o.s.w.c.s.GenericWebApplicationContext[551] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+[main] INFO  2018-11-07 19:23:35.623 o.s.b.a.l.AutoConfigurationReportLoggingInitializer[101] - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[main] ERROR 2018-11-07 19:23:35.629 o.s.b.SpringApplication[771] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 38 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 60 common frames omitted
+[main] ERROR 2018-11-07 19:23:35.631 o.s.t.c.TestContextManager[234] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b] to prepare test instance [com.mljr.test.MybatisPlustTest@65f58c6e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 38 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 60 common frames omitted
+[main] INFO  2018-11-07 19:27:07.131 o.s.b.t.c.SpringBootTestContextBootstrapper[319] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mljr.test.MybatisPlustTest], using SpringBootContextLoader
+[main] INFO  2018-11-07 19:27:07.137 o.s.t.c.s.AbstractContextLoader[264] - Could not detect default resource locations for test class [com.mljr.test.MybatisPlustTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[main] INFO  2018-11-07 19:27:07.138 o.s.t.c.s.AnnotationConfigContextLoaderUtils[81] - Could not detect default configuration classes for test class [com.mljr.test.MybatisPlustTest]: MybatisPlustTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[main] INFO  2018-11-07 19:27:07.257 o.s.b.t.c.SpringBootTestContextBootstrapper[206] - Found @SpringBootConfiguration com.mljr.MybatisPlusApplication for test class com.mljr.test.MybatisPlustTest
+[main] INFO  2018-11-07 19:27:07.264 o.s.b.t.c.SpringBootTestContextBootstrapper[260] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[main] INFO  2018-11-07 19:27:07.285 o.s.b.t.c.SpringBootTestContextBootstrapper[187] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@184cf7cf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2fd6b6c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5bfa9431, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5db250b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223f3642, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38c5cc4c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@37918c79, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78e94dcf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@233fe9b6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@358ee631, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ec756bd]
+[main] INFO  2018-11-07 19:27:07.832 c.m.t.MybatisPlustTest[48] - Starting MybatisPlustTest on DESKTOP-P17JSOB with PID 4020 (started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 19:27:07.833 c.m.t.MybatisPlustTest[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 19:27:07.866 o.s.w.c.s.GenericWebApplicationContext[583] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@169bb4dd: startup date [Wed Nov 07 19:27:07 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 19:27:08.333 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 19:27:08.740 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.740 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.740 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.740 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.740 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.741 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.741 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.742 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:27:08.742 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] WARN  2018-11-07 19:27:09.625 o.s.w.c.s.GenericWebApplicationContext[551] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+[main] INFO  2018-11-07 19:27:09.636 o.s.b.a.l.AutoConfigurationReportLoggingInitializer[101] - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[main] ERROR 2018-11-07 19:27:09.641 o.s.b.SpringApplication[771] - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 38 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 60 common frames omitted
+[main] ERROR 2018-11-07 19:27:09.643 o.s.t.c.TestContextManager[234] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b] to prepare test instance [com.mljr.test.MybatisPlustTest@22367b8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.context.event.internalEventListenerProcessor': BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:92)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:102)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:88)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:103)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:248)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1011)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:473)
+	... 38 common frames omitted
+Caused by: java.lang.IllegalArgumentException: error Type referred to is not an annotation type: io$renren$datasources$annotation$DataSource
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:301)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:217)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.checkReadyToMatch(AspectJExpressionPointcut.java:190)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:169)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:220)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:279)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:311)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:119)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:89)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:70)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:346)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:298)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 60 common frames omitted
+[main] INFO  2018-11-07 19:39:31.910 o.s.b.t.c.SpringBootTestContextBootstrapper[319] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mljr.test.MybatisPlustTest], using SpringBootContextLoader
+[main] INFO  2018-11-07 19:39:31.916 o.s.t.c.s.AbstractContextLoader[264] - Could not detect default resource locations for test class [com.mljr.test.MybatisPlustTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[main] INFO  2018-11-07 19:39:31.917 o.s.t.c.s.AnnotationConfigContextLoaderUtils[81] - Could not detect default configuration classes for test class [com.mljr.test.MybatisPlustTest]: MybatisPlustTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[main] INFO  2018-11-07 19:39:32.025 o.s.b.t.c.SpringBootTestContextBootstrapper[206] - Found @SpringBootConfiguration com.mljr.MybatisPlusApplication for test class com.mljr.test.MybatisPlustTest
+[main] INFO  2018-11-07 19:39:32.032 o.s.b.t.c.SpringBootTestContextBootstrapper[260] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[main] INFO  2018-11-07 19:39:32.048 o.s.b.t.c.SpringBootTestContextBootstrapper[187] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@184cf7cf, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2fd6b6c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5bfa9431, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5db250b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223f3642, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@38c5cc4c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@37918c79, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78e94dcf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@233fe9b6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@358ee631, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ec756bd]
+[main] INFO  2018-11-07 19:39:32.649 c.m.t.MybatisPlustTest[48] - Starting MybatisPlustTest on DESKTOP-P17JSOB with PID 8884 (started by admin in D:\workspace\springboot-mybatisplus)
+[main] INFO  2018-11-07 19:39:32.651 c.m.t.MybatisPlustTest[597] - The following profiles are active: dev
+[main] INFO  2018-11-07 19:39:32.702 o.s.w.c.s.GenericWebApplicationContext[583] - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@169bb4dd: startup date [Wed Nov 07 19:39:32 CST 2018]; root of context hierarchy
+[background-preinit] INFO  2018-11-07 19:39:33.063 o.h.v.i.u.Version[30] - HV000001: Hibernate Validator 5.3.5.Final
+[main] WARN  2018-11-07 19:39:33.472 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'loginMapper' and 'com.mljr.security.mapper.LoginMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.473 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'logoutMapper' and 'com.mljr.security.mapper.LogoutMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.473 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'persistentLoginsMapper' and 'com.mljr.security.mapper.PersistentLoginsMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.474 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'resourcesMapper' and 'com.mljr.security.mapper.ResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.474 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleMapper' and 'com.mljr.security.mapper.RoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.475 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'roleResourcesMapper' and 'com.mljr.security.mapper.RoleResourcesMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.475 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userMapper' and 'com.mljr.security.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.477 o.m.s.m.ClassPathMapperScanner[239] - Skipping MapperFactoryBean with name 'userRoleMapper' and 'com.mljr.security.mapper.UserRoleMapper' mapperInterface. Bean already defined with the same name!
+[main] WARN  2018-11-07 19:39:33.478 o.m.s.m.ClassPathMapperScanner[166] - No MyBatis mapper was found in '[com.mljr.security.mapper]' package. Please check your configuration.
+[main] WARN  2018-11-07 19:39:36.047 o.s.w.c.s.GenericWebApplicationContext[551] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+[main] INFO  2018-11-07 19:39:36.068 o.s.b.a.l.AutoConfigurationReportLoggingInitializer[101] - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[main] ERROR 2018-11-07 19:39:36.078 o.s.b.d.LoggingFailureAnalysisReporter[42] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   loginServiceImpl (field protected com.baomidou.mybatisplus.mapper.BaseMapper com.baomidou.mybatisplus.service.impl.ServiceImpl.baseMapper)
+      ↓
+   loginMapper defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]
+      ↓
+   sqlSessionFactory defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]
+┌─────┐
+|  dataSource defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]
+↑     ↓
+|  firstDataSource defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]
+↑     ↓
+|  dataSourceInitializer
+└─────┘
+
+
+[main] ERROR 2018-11-07 19:39:36.085 o.s.t.c.TestContextManager[234] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@2805c96b] to prepare test instance [com.mljr.test.MybatisPlustTest@74a58a06]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:588)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginMapper' defined in file [D:\workspace\springboot-mybatisplus\target\classes\com\mljr\security\mapper\LoginMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1249)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/spring/boot/starter/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1342)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Unsatisfied dependency expressed through method 'dataSource' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:467)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'firstDataSource' defined in class path resource [com/mljr/datasources/DynamicDataSourceConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:835)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:137)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:345)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:340)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:62)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	... 91 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:347)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:345)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:340)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1090)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.init(DataSourceInitializer.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:134)
+	... 106 common frames omitted

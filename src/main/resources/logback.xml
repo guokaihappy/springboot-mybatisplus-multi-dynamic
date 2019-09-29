@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+
+    <property name="LOG_HOME" value="${catalina.base}/logs/"/>
+
+	<!-- 
+		ConsoleAppender:指定日志的输出位置是console控制台 ；
+			    encoder：指定日志的输出格式；
+			    		%thread: 输出日志的线程名
+			    		%level ： 输出日志的级别
+			    		%d     : 输出日志的时间
+			    		%logger: 输出的日志信息所属的类名
+			    		%L     : 输出的日志信息所在的行号
+			    		%msg   : 输出的日志信息
+			    		%n     : 日志信息输完后换行
+		-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%thread] %-5level %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{5}[%L] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+	<!-- 
+		RollingFileAppender: 将日志记录到指定文件，当符合某个条件时，将日志记录到其他文件；
+					   file： 被写入日志的文件名，可以是相对目录，也可以是绝对目录；
+					encoder： 指定日志的输出格式；
+					 filter： 对Appender中的日志信息进行过滤，选择符合条件的日志信息输出到Console或者日志文件中。
+			  rollingPolicy： 当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名。下面的配置是将日志文件重命名后备份；
+	 -->
+    <appender name="APP_ALL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_HOME}/vcard_all.log</File>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%thread] %-5level %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{5}[%L] - %msg%n</pattern>
+        </encoder>
+		
+		<!-- ThresholdFilter： 临界值过滤器，过滤掉低于指定临界值的日志,该过滤器会过滤出Info，和  Info以上级别的日志 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+
+		<!-- TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责触发滚动 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/backup/vcard_all.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="APP_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_HOME}/vcard_error.log</File>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%thread] %-5level %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{5}[%L] - %msg%n</pattern>
+        </encoder>
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/backup/vcard_error.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+    </appender>
+    
+    <!-- <logger name="com.ibatis" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG" />
+    <logger name="java.sql.Connection" level="DEBUG" />
+    <logger name="java.sql.Statement" level="DEBUG" />
+    <logger name="java.sql.PreparedStatement" level="DEBUG" /> -->
+    
+    <!--注解： root将级别为“INFO”及大于“INFO”的日志信息交给已经配置好的名为“STDOUT”的appender处理，
+    		“STDOUT”appender将信息已配置的格式打印到控制台； 
+    -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="APP_ALL"/>
+        <appender-ref ref="APP_ERROR"/>
+    </root>
+    
+
+</configuration>

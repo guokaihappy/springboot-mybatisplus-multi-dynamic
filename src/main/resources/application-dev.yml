@@ -1,0 +1,23 @@
+#设置提供的服务名
+spring:
+  aop:
+      proxy-target-class: true
+      auto: true
+  datasource:
+      druid:
+          db1:
+              url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+              username: root
+              password: root
+              driver-class-name: com.mysql.jdbc.Driver
+              initialSize: 5
+              minIdle: 5
+              maxActive: 20
+          db2:
+              url: jdbc:mysql://localhost:3306/vhr?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+              username: root
+              password: root
+              driver-class-name: com.mysql.jdbc.Driver
+              initialSize: 5
+              minIdle: 5
+              maxActive: 20
