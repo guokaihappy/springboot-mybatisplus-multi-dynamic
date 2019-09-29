@@ -1,4 +1,4 @@
-# springboot-mybatisplus
+# springboot-mybatisplus-multi-dynamic
 
 #### 项目介绍
 springboot集成mybatisplus实现多数据源配置
